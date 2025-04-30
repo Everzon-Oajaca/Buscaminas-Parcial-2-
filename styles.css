@@ -2,12 +2,13 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #f0f2f5, #d9e2ec);
-  height: 100vh;
   margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 /* Título */
@@ -22,7 +23,8 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin-bottom: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
 }
 
 #mines-count, #timer {
@@ -53,26 +55,27 @@ h1 {
 /* Tablero */
 #board {
   display: grid;
-  grid-template-columns: repeat(10, 50px);
-  grid-template-rows: repeat(10, 50px);
+  grid-template-columns: repeat(10, 40px);
+  grid-template-rows: repeat(10, 40px);
   gap: 3px;
   background: #888;
-  padding: 8px;
+  padding: 10px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
 }
 
 /* Casillas */
 .cell {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: #cfd8dc;
   border-radius: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 18px;
   cursor: pointer;
   user-select: none;
   transition: background-color 0.2s, transform 0.2s;
@@ -129,13 +132,6 @@ h1 {
   color: green;
 }
 
-
-
-
-
-
-
-
 .score-panel {
   background: linear-gradient(135deg, #c2e9fb, #a1c4fd);
   padding: 20px;
@@ -173,9 +169,76 @@ h1 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+/* Versión móvil */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
 
+  h1 {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
 
+  .top-panel {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
 
+  #board {
+    grid-template-columns: repeat(10, 9vw);
+    grid-template-rows: repeat(10, 9vw);
+    gap: 2px;
+    padding: 5px;
+    width: 100%;
+    max-width: 95vw;
+    justify-content: center;
+  }
+
+  .cell {
+    width: 9vw;
+    height: 9vw;
+    font-size: 4vw;
+  }
+
+  #mines-count, #timer {
+    font-size: 18px;
+    width: 60px;
+    padding: 5px;
+  }
+
+  #reset-button {
+    font-size: 26px;
+    padding: 8px;
+  }
+
+  .score-panel {
+    width: 100%;
+    max-width: 95vw;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .score-panel h2 {
+    font-size: 16px;
+  }
+
+  .score-panel table {
+    font-size: 11px;
+  }
+
+  #mensaje-final {
+    font-size: 18px;
+    padding: 8px;
+    width: 100%;
+    max-width: 95vw;
+  }
+}
 
 
 
