@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscaminas 10x10</title>
+  <link rel="icon" href="https://emojicdn.elk.sh/%F0%9F%92%A3" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+
+<h1>BUSCAMINAS</h1>
+
+<div class="top-panel">
+
+  <button id="reset-button">😃</button>
+  <div id="timer">000</div>
+</div>
+
+<div id="board"></div>
+<div id="mensaje-final" class="mensaje-oculto"></div>
+
+<div class="score-panel">
+  <h2>🏆 Mejores Tiempos</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Dificultad</th>
+        <th>Tiempo (segundos)</th>
+      </tr>
+    </thead>
+    <tbody id="high-scores">
+      <!-- Aquí se puede insertar dinámicamente -->
+    </tbody>
+  </table>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
