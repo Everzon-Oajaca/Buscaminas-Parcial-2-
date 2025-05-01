@@ -19,9 +19,14 @@
 </div>
 
 <div id="board"></div>
+
+
+<button id="show-scores-btn" class="modern-btn">🏆 Ver Mejores Tiempos</button>
+<button id="ayuda-btn" class="modern-btn">❓ Ayuda</button>
+<!-- AÑADIR ESTO -->
 <div id="mensaje-final" class="mensaje-oculto"></div>
 
-<div class="score-panel">
+<div class="score-panel mensaje-oculto" id="score-panel">
   <h2>🏆 Mejores Tiempos</h2>
   <table>
     <thead>
@@ -35,8 +40,24 @@
     </tbody>
   </table>
 </div>
+<!-- Modal de advertencia -->
+<div id="advertencia-modal" class="modal oculto">
+  <div class="modal-content">
+    <h3>⚠️ Advertencia</h3>
+    <p>Esta casilla no ha sido deducida como segura.<br>¿Deseas ingresar el número de minas manualmente?</p>
+    <div class="modal-buttons">
+      <button id="advertencia-confirmar">Sí</button>
+      <button id="advertencia-cancelar">No</button>
+    
+    </div>
+  </div>
+</div>
+
+
+
 
 <script src="script.js"></script>
 
 </body>
 </html>
+
